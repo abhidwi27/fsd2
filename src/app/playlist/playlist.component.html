@@ -1,0 +1,4 @@
+<ul class="list-inline">
+  <li class="list-inline-item my-2" [hidden]="!video.isApproved" *ngFor="let video of playlistArr" (click)="playNewVideo(video.dataLink)"><a><img
+        [src]="video.thumbnail" [attr.data-link]="video.dataLink"></a></li>
+</ul>

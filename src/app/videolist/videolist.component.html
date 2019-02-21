@@ -1,0 +1,33 @@
+<div class="my-auto">
+  <div class="table">
+    <table>
+      <thead>
+        <th> Sr No. </th>
+        <th> Title </th>
+        <th> URL </th>
+        <th> Modify </th>
+      </thead>
+      <tbody>
+        <tr class="text-center" *ngFor="let video of videoList, index as i">
+          <td>{{ i+1}}</td>
+          <td> {{video.title}} </td>
+          <td> {{video.dataLink}}</td>
+          <td>
+            <ul class="list-inline">
+              <li class="list-inline-item" (click)=Edit(video)>
+                <button class="btn btn-outline-success"> <i class="fa fa-edit"></i> Edit </button>
+              </li>
+              <li class="list-inline-item" (click)=Delete(video)>
+                <button class="btn btn-outline-success"><i class="fa fa-trash"></i> Delete </button>
+              </li>
+              <li class="list-inline-item" (click)=Approve(video)>
+                <button class="btn btn-outline-success" [disabled]="video.isApproved"><i class="fa fa-check"></i>
+                  Approve </button>
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

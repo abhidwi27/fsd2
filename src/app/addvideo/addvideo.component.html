@@ -1,0 +1,33 @@
+<form #addVideoForm="ngForm">
+  <div class="container mt-5 mb-5 add-video-container">
+    <div class="form-group row justify-content-md-center">
+      <div class="col-md-2">
+        <label for="title"> Title </label>
+      </div>
+      <div class="col-md-6">
+        <input type="text" class="form-control" id="title" placeholder="Enter title" [ngModelOptions]="{standalone: true}"
+          [(ngModel)]="vid.title" required>
+      </div>
+    </div>
+    <div class="form-group row justify-content-md-center">
+      <div class="col-md-2">
+        <label for="videourl"> Youtube URL </label>
+      </div>
+      <div class="col-md-6">
+        <input type="url" class="form-control" id="videourl" name="dataLink" [ngModelOptions]="{standalone: true}"
+          placeholder="url" required [(ngModel)]="vid.dataLink">
+      </div>
+
+    </div>
+    <div class="row justify-content-md-center">
+      <div class="col-md-8" align="center">
+        <button type="button" class="btn btn-primary" (click)="videoList.addVideo(vid)"> {{btnText}} </button>
+      </div>
+    </div>
+    <div class="row mt-5 mb-5 justify-content-md-center">
+      <div align="center">
+        <app-videolist #videoList [addFlag]="addFlag" (editVideo)="update($event)"></app-videolist>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,1 +1,98 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap-css-only/css/bootstrap.css';
+@import '../node_modules/bootstrap-css-only/css/bootstrap-grid.css';
+@import '../node_modules/bootstrap-css-only/css/bootstrap-reboot.css';
+@import '../node_modules/font-awesome/css/font-awesome.css';
+
+
+
+    .video-source{
+    position: relative;
+    background: #000;
+    }
+    
+    .video-controls{
+    margin-top: -50px;
+    padding-top: 10px;
+    background-color: #000;
+    color: #fff;
+    opacity: 0.9;
+    padding-bottom: 10px;
+    position: relative;
+    }
+    
+    
+    li:hover{
+        cursor: pointer;
+    }
+
+    li{        
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+    }
+    .video-controls li a span i{
+        font-size: 2rem;
+    }
+    .video-container{
+        background-color: #000;
+    }
+    video{
+        width: 100%;
+    }
+    
+    .playlist{
+        background-color: #f5ebeb;
+        max-height: 700px;
+        overflow: scroll;
+    }
+    
+    .playlist li img:hover{
+        cursor: pointer;
+    }
+    li a span i {
+    font-size: 25px;
+    }
+    
+    .playlist img{
+    width : 100%;
+    max-width: 300px;
+    min-width: 200px;
+    }
+    
+    .list-inline-item:not(:last-child){
+        margin-right: 0;
+    }
+    .disabled{
+        color: #8a7a7a;
+    }
+    
+    .progressBar{
+        position: relative;
+        width: 100%;
+        height: 20px;
+        background-color: #98cff3;
+    }
+    
+    .timeBar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: #ccc;
+    }
+
+    .add-video-container{
+        padding: 2rem;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+    }
+
+    .table td{
+        vertical-align: middle;
+    }
+
+    ol, ul, dl{
+        margin-top: 1rem;
+    }

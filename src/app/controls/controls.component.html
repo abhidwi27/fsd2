@@ -1,0 +1,16 @@
+<app-player #player></app-player>
+<div align="center" class="video-controls mx-auto">
+  <ul class="list-inline my-auto">
+    <li class="list-inline-item" (click)="player.play()" [class.disabled]="player.isPlaying"><a><span><i class="fa fa-play-circle"></i></span></a></li>
+    <li class="list-inline-item" (click)="player.pause()" [class.disabled]="!player.isPlaying"><a><span><i class="fa fa-pause-circle"></i></span></a></li>
+    <li class="list-inline-item" (click)="player.volumeUp()"><a><span><i class="fa fa-plus-circle"></i></span></a></li>
+    <li class="list-inline-item" (click)="player.volumeDown()"><a><span><i class="fa fa-minus-circle"></i></span></a></li>
+    <li class="list-inline-item" (click)="player.muteUnmute()"><a><span><i class="fa fa-headphones"></i></span></a></li>
+    <li class="list-inline-item" (click)="player.reload()"><a><span><i class="fa fa-undo"></i></span></a></li>
+    <li class="list-inline-item" (click)="player.like()"><a><span><i class="fa fa-thumbs-up"></i></span></a></li>
+    <li class="list-inline-item"> <span> {{player.likeCount}} </span> </li>
+    <li class="list-inline-item" (click)="player.dislike()"><a><span><i class="fa fa-thumbs-down"></i></span></a></li>
+    <li class="list-inline-item"> <span> {{player.dislikeCount}} </span> </li>
+  </ul>
+</div>
+<app-progressbar></app-progressbar>
